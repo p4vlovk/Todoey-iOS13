@@ -12,10 +12,6 @@ class TodoListViewController: UITableViewController {
             Item(title: "Buy Eggos"),
             Item(title: "Destroy Demogordon")
         ]
-        
-        //        if let items = defaults.array(forKey: K.userDefaultsArrayKey) as? [String] {
-        //            itemArray = items
-        //        }
     }
     
     //MARK: - TableView Datasource Methods
