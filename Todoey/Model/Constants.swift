@@ -5,4 +5,5 @@ struct K {
     static let alertTitle = "Add New Todoey Item"
     static let alertActionTitle = "Add Item"
     static let alertTextFieldPlaceholder = "Create new item"
+    static let userDefaultsArrayKey = "TodoListArray"
 }

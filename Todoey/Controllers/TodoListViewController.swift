@@ -1,18 +1,15 @@
-//
-//  ViewController.swift
-//  Todoey
-//
-//  Created by Philipp Muellauer on 02/12/2019.
-//  Copyright © 2019 App Brewery. All rights reserved.
-//
-
 import UIKit
 
 class TodoListViewController: UITableViewController {
-    var itemArray = ["Find Mike", "Buy eggs", "Destroy Demogordon"]
+    var itemArray: [String] = []
+    
+    let defaults = UserDefaults.standard
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        if let items = defaults.array(forKey: K.userDefaultsArrayKey) as? [String] {
+            itemArray = items
+        }
     }
     
     //MARK: - TableView Datasource Methods
@@ -44,6 +41,7 @@ class TodoListViewController: UITableViewController {
         let alert = UIAlertController(title: K.alertTitle, message: "", preferredStyle: .alert)
         let action = UIAlertAction(title: K.alertActionTitle, style: .default) { action in
             self.itemArray.append(textField.text!)
+            self.defaults.set(self.itemArray, forKey: K.userDefaultsArrayKey)
             self.tableView.reloadData()
         }
         
