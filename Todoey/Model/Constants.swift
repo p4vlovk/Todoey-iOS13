@@ -6,4 +6,5 @@ struct K {
     static let alertActionTitle = "Add Item"
     static let alertTextFieldPlaceholder = "Create new item"
     static let userDefaultsArrayKey = "TodoListArray"
+    static let itemsFileName = "Items.plist"
 }
