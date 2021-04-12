@@ -13,6 +13,7 @@ struct K {
     static let itemsFileName = "Items.plist"
     
     struct Identifiers {
+        static let cellIdentifier = "Cell"
         static let itemCellIdentifier = "ToDoItemCell"
         static let categoryCellIdentifier = "CategoryCell"
         static let itemsSegueIdentifier = "goToItems"
