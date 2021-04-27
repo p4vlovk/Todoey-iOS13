@@ -18,4 +18,8 @@ struct K {
         static let categoryCellIdentifier = "CategoryCell"
         static let itemsSegueIdentifier = "goToItems"
     }
+    
+    struct Colours {
+        static let navBarBackgroudHexColour = "1D9BF6"
+    }
 }
